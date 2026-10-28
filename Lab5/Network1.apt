@@ -1,0 +1,23 @@
+.name "Network1"
+.type PN
+
+.places
+p1
+p2
+p3
+p4
+p5
+
+.transitions
+a
+c
+b
+d
+
+.flows
+a: {1*p3} -> {1*p1}
+c: {1*p1, 1*p2} -> {1*p3, 1*p4}
+b: {1*p4} -> {1*p2}
+d: {1*p3} -> {1*p5}
+
+.initial_marking {1*p3, 1*p4}

@@ -1,0 +1,24 @@
+.name "Network2"
+.type PN
+
+.places
+p1
+p2
+p3
+p4
+p5
+p6
+
+.transitions
+t1
+t2
+t3
+t4
+
+.flows
+t1: {1*p1} -> {1*p2, 1*p3, 1*p6}
+t2: {1*p2} -> {1*p4}
+t3: {1*p3} -> {1*p5}
+t4: {1*p4, 1*p5, 1*p6} -> {1*p1}
+
+.initial_marking {1*p1, 1*p6}
